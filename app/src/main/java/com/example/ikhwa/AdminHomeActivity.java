@@ -22,12 +22,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.*;
+import androidx.cardview.widget.CardView;
+
 
 public class AdminHomeActivity extends AppCompatActivity {
 
     private static final String TAG = "AdminHomeActivity";
 
     private ImageButton courseBtn, teacherBtn, studentBtn, notificationBtn, menuBtn;
+    private CardView courseCard, teacherCard, studentCard, notificationCard;
     private TextView courseCount, teacherCount, studentCount, notificationCount,studedils;
 
     @Override
@@ -47,6 +50,10 @@ public class AdminHomeActivity extends AppCompatActivity {
         teacherCount = findViewById(R.id.no_of_teachers);
         studentCount = findViewById(R.id.no_of_students);
         notificationCount = findViewById(R.id.no_of_items);
+        courseCard = findViewById(R.id.courseCard);
+        teacherCard = findViewById(R.id.teacherCard);
+        studentCard = findViewById(R.id.studentCard);
+        notificationCard = findViewById(R.id.notificationCard);
 
 
         loadCountsFromFirebase();
@@ -123,11 +130,34 @@ public class AdminHomeActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
-        courseBtn.setOnClickListener(view -> startActivity(new Intent(this, CourseActivity.class)));
-        teacherBtn.setOnClickListener(view -> startActivity(new Intent(this, ApprovedRejectedTeachersActivity.class)));
-        studentBtn.setOnClickListener(view -> startActivity(new Intent(this, Students_Details_Activity.class)));
-        notificationBtn.setOnClickListener(view -> startActivity(new Intent(this, AdminNotificationActivity.class)));
-        studedils.setOnClickListener(view -> startActivity(new Intent(this, PendingTeachersActivity.class)));
+
+        View.OnClickListener courseClick = v ->
+                startActivity(new Intent(this, CourseActivity.class));
+
+        View.OnClickListener teacherClick = v ->
+                startActivity(new Intent(this, ApprovedRejectedTeachersActivity.class));
+
+        View.OnClickListener studentClick = v ->
+                startActivity(new Intent(this, Students_Details_Activity.class));
+
+        View.OnClickListener notificationClick = v ->
+                startActivity(new Intent(this, AdminNotificationActivity.class));
+
+        // Image Buttons
+        courseBtn.setOnClickListener(courseClick);
+        teacherBtn.setOnClickListener(teacherClick);
+        studentBtn.setOnClickListener(studentClick);
+        notificationBtn.setOnClickListener(notificationClick);
+
+        // Full Cards
+        courseCard.setOnClickListener(courseClick);
+        teacherCard.setOnClickListener(teacherClick);
+        studentCard.setOnClickListener(studentClick);
+        notificationCard.setOnClickListener(notificationClick);
+
+        studedils.setOnClickListener(v ->
+                startActivity(new Intent(this, PendingTeachersActivity.class)));
+
         menuBtn.setOnClickListener(this::showPopupMenu);
     }
 

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="14dp"
+
+
+    app:cardCornerRadius="22dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@android:color/white">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="18dp"
+
+        android:background="@drawable/quiz_card_background">
+
+
+        <!-- Question Header -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical">
+
+
+            <!-- Question Number -->
+
+            <TextView
+
+                android:id="@+id/tvQuestionNo"
+
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+
+                android:background="@drawable/form_btn1"
+
+                android:gravity="center"
+
+                android:text="1"
+
+                android:textColor="#FFFFFF"
+
+                android:textSize="17sp"
+
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="12dp"
+
+                android:text="Question"
+
+                android:textColor="#7A7A7A"
+
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+
+        <!-- Question Text -->
+
+
+        <TextView
+
+            android:id="@+id/tvQuestion"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="18dp"
+
+            android:lineSpacingExtra="5dp"
+
+            android:text="Question"
+
+            android:textColor="#202020"
+
+            android:textSize="19sp"
+
+            android:textStyle="bold"/>
+
+
+
+        <!-- Options Area -->
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            app:cardCornerRadius="16dp"
+
+            app:cardElevation="0dp"
+
+            app:cardBackgroundColor="#F0F0D8">
+
+
+            <RadioGroup
+
+                android:id="@+id/radioGroup"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:padding="12dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <!-- Result Message -->
+
+
+        <TextView
+
+            android:id="@+id/tvResult"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+
+            android:padding="12dp"
+
+            android:background="#54B670"
+
+            android:text="Correct Answer"
+
+            android:textColor="#93F098"
+
+            android:textSize="15sp"
+
+            android:textStyle="bold"
+
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

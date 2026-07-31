@@ -1,101 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F5F5F5"
-    android:padding="16dp">
+    android:fillViewport="true"
+    android:background="#F5F7FB">
 
     <LinearLayout
-        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/layout_border"
-        android:padding="20dp"
+        android:orientation="vertical">
 
-        android:elevation="4dp">
+        <!-- Lecture Card -->
 
-        <!-- Video Title -->
-        <TextView
-            android:id="@+id/tvVideoTitle"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Video Title"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textColor="#333333"
-            android:paddingBottom="4dp" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="-8dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="6dp">
 
-        <!-- Video Link -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click the link to watch the lecture"
-            android:textColor="#1E88E5"
-            android:textSize="16sp"
-            android:autoLink="web"
-            android:paddingBottom="16dp" />
-        <TextView
-            android:id="@+id/tvVideoLink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Video Link"
-            android:textColor="#1E88E5"
-            android:textSize="16sp"
-            android:autoLink="web"
-            android:paddingBottom="16dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/header_background"
+                android:padding="20dp">
 
-        <!-- Quiz Questions Container -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📖 Lecture"
+                    android:textColor="#FFEB3B"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvVideoTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Lecture Title"
+                    android:textColor="#FAF5F5"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Click below to watch lecture"
+                    android:textColor="#F2EFEF"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tvVideoLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:autoLink="web"
+                    android:text="Video Link"
+                    android:textColor="#2962FF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Quiz Questions -->
+
         <LinearLayout
             android:id="@+id/quizContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"/>
 
-        <!-- Submit Button -->
+        <!-- Submit -->
+
         <Button
             android:id="@+id/btnSubmitAll"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Submit All"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/form_btn1"
+            android:text="Submit Quiz"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- Progress Card -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:padding="12dp" />
+            app:cardCornerRadius="18dp"
+            app:cardElevation="5dp">
 
-        <!-- Circular ProgressBar with Percentage -->
-        <FrameLayout
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp">
-
-            <ProgressBar
-                android:id="@+id/quizProgressBar"
-                style="?android:attr/progressBarStyleHorizontal"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="0"
-                android:rotation="-90"
-                android:progressDrawable="@drawable/custom_progress_drawable" />
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="#F1F8F3"
+                android:padding="16dp">
 
-            <TextView
-                android:id="@+id/percentageText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="0%"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="#333333"
-                android:gravity="center" />
-        </FrameLayout>
+                <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp">
+
+                    <ProgressBar
+                        android:id="@+id/quizProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_progress_drawable"
+                        android:rotation="-90"/>
+
+                    <TextView
+                        android:id="@+id/percentageText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="0%"
+                        android:textColor="#222222"
+                        android:textSize="24sp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quiz Result"
+                        android:textColor="#222222"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Complete the quiz to see your score."
+                        android:textColor="#666666"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
 </ScrollView>

@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="#FDFDFD">
-       
+
         <LinearLayout
             android:id="@+id/teachers_container"
             android:layout_width="match_parent"

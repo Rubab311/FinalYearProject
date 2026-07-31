@@ -50,7 +50,6 @@
             android:id="@+id/tvStudentName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Muhammad Ahmad"
             android:textSize="20sp"
             android:textColor="#3F51B5"
             android:paddingTop="18dp"

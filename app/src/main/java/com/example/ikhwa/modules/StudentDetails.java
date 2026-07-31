@@ -1,41 +1,71 @@
 package com.example.ikhwa.modules;
 
 public class StudentDetails {
+
+    private String uid;
     private String student_name;
     private String father_name;
     private String email;
+    private String age;
+    private String phone;
+    private String address;
 
     public StudentDetails() {
-        // Default constructor required for Firebase
     }
 
-    public StudentDetails(String student_name, String father_name, String email) {
-        this.student_name = student_name;
-        this.father_name = father_name;
-        this.email = email;
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getStudent_name() {
         return student_name;
     }
 
-    public String getfather_name() {
+    public void setStudent_name(String student_name) {
+        this.student_name = student_name;
+    }
+
+    public String getFather_name() {
         return father_name;
+    }
+
+    public void setFather_name(String father_name) {
+        this.father_name = father_name;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setStudent_name(String Student_name) {
-        this.student_name = Student_name;
-    }
-
-    public void setfather_name(String father_name) {
-        this.father_name = father_name;
-    }
-
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

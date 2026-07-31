@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardLecture"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="12dp">
+
+        <!-- Blue Circle -->
+
+        <LinearLayout
+            android:id="@+id/iconBg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/blue_circle">
+            android:layout_centerVertical="true"
+
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBook"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_book"/>
+        </LinearLayout>
+
+        <!-- Lecture Title -->
+
+        <TextView
+            android:id="@+id/txtLectureTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/iconBg"
+            android:layout_marginStart="14dp"
+            android:text="Lecture 1"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Attempted Badge -->
+
+        <TextView
+            android:id="@+id/txtAttempted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLectureTitle"
+            android:layout_toEndOf="@id/iconBg"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/attempted_bg"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Attempted"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <!-- Arrow -->
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

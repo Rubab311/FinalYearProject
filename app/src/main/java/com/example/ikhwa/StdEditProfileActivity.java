@@ -5,92 +5,195 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.ikhwa.modules.Student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ikhwa.modules.Student;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class StdEditProfileActivity extends AppCompatActivity {
 
-    EditText etStudentNameEdit,etFatherNameEdit, etNumberEdit, etAgeEdit, etAddressEdit, etEmailEdit;
-    Button btnSave;
+    private EditText etStudentNameEdit;
+    private EditText etFatherNameEdit;
+    private EditText etNumberEdit;
+    private EditText etAgeEdit;
+    private EditText etAddressEdit;
+    private EditText etEmailEdit;
 
-    FirebaseAuth mAuth;
-    DatabaseReference databaseReference;
-    String uid;
+    private Button btnSave;
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference studentRef;
+    private DatabaseReference familyRef;
+
+    private String uid;
+    private String ownerUid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_std_edit_profile); // Make sure this matches your XML
+        setContentView(R.layout.activity_std_edit_profile);
 
-        // Initialize views
-        etStudentNameEdit=findViewById(R.id.etStuNameEdit);
+        etStudentNameEdit = findViewById(R.id.etStuNameEdit);
         etFatherNameEdit = findViewById(R.id.etFatherNameEdit);
         etNumberEdit = findViewById(R.id.etNumberEdit);
         etAgeEdit = findViewById(R.id.etAgeEdit);
         etAddressEdit = findViewById(R.id.etAddressEdit);
         etEmailEdit = findViewById(R.id.etEmailEdit);
+
         btnSave = findViewById(R.id.btnSave);
 
-        // Firebase setup
         mAuth = FirebaseAuth.getInstance();
+
         if (mAuth.getCurrentUser() == null) {
             Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
 
-        uid = mAuth.getCurrentUser().getUid();
-        databaseReference = FirebaseDatabase.getInstance().getReference("Student");
+        ownerUid = mAuth.getCurrentUser().getUid();
 
-        // Load existing data
-        databaseReference.child(uid).get().addOnSuccessListener(dataSnapshot -> {
-            if (dataSnapshot.exists()) {
-                Student student = dataSnapshot.getValue(Student.class);
-                if (student != null) {
+        uid = SessionManager.getCurrentMemberId(this);
+
+        if (uid == null || uid.isEmpty()) {
+            uid = ownerUid;
+        }
+
+        studentRef = FirebaseDatabase.getInstance()
+                .getReference("Student");
+
+        familyRef = FirebaseDatabase.getInstance()
+                .getReference("FamilyAccounts")
+                .child(ownerUid)
+                .child("members");
+
+        loadProfile();
+
+        btnSave.setOnClickListener(v -> saveProfile());
+
+    }
+    private void loadProfile() {
+
+        studentRef.child(uid)
+                .get()
+                .addOnSuccessListener(dataSnapshot -> {
+
+                    if (!dataSnapshot.exists()) {
+
+                        Toast.makeText(
+                                StdEditProfileActivity.this,
+                                "No profile found",
+                                Toast.LENGTH_SHORT
+                        ).show();
+
+                        return;
+                    }
+
+                    Student student = dataSnapshot.getValue(Student.class);
+
+                    if (student == null) {
+                        return;
+                    }
+
                     etStudentNameEdit.setText(student.getStudent_name());
                     etFatherNameEdit.setText(student.getFather_name());
                     etNumberEdit.setText(student.getPhone());
-                    etAgeEdit.setText(student.getAge()); // Already string
+                    etAgeEdit.setText(student.getAge());
                     etAddressEdit.setText(student.getAddress());
                     etEmailEdit.setText(student.getEmail());
-                }
-            } else {
-                Toast.makeText(this, "No data found", Toast.LENGTH_SHORT).show();
-            }
-        }).addOnFailureListener(e -> {
-            Toast.makeText(this, "Failed to fetch data", Toast.LENGTH_SHORT).show();
-        });
 
-        // Save button logic
-        btnSave.setOnClickListener(v -> {
-            String studentName = etStudentNameEdit.getText().toString().trim();
-            String fatherName = etFatherNameEdit.getText().toString().trim();
-            String phone = etNumberEdit.getText().toString().trim();
-            String age = etAgeEdit.getText().toString().trim(); // Keep age as String
-            String address = etAddressEdit.getText().toString().trim();
-            String email = etEmailEdit.getText().toString().trim();
+                })
+                .addOnFailureListener(e ->
 
-            if (TextUtils.isEmpty(studentName) ||TextUtils.isEmpty(fatherName) || TextUtils.isEmpty(phone) ||
-                    TextUtils.isEmpty(age) || TextUtils.isEmpty(address) || TextUtils.isEmpty(email)) {
-                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                return;
-            }
+                        Toast.makeText(
+                                StdEditProfileActivity.this,
+                                "Failed to load profile",
+                                Toast.LENGTH_SHORT
+                        ).show()
 
-            // Update individual fields in Firebase
-            databaseReference.child(uid).child("student_name").setValue(studentName);
-            databaseReference.child(uid).child("father_name").setValue(fatherName);
-            databaseReference.child(uid).child("phone").setValue(phone);
-            databaseReference.child(uid).child("age").setValue(age);
-            databaseReference.child(uid).child("address").setValue(address);
-            databaseReference.child(uid).child("email").setValue(email);
+                );
 
-            Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
-            finish();
-        });
+    }
+
+    private void saveProfile() {
+
+        String studentName =
+                etStudentNameEdit.getText().toString().trim();
+
+        String fatherName =
+                etFatherNameEdit.getText().toString().trim();
+
+        String phone =
+                etNumberEdit.getText().toString().trim();
+
+        String age =
+                etAgeEdit.getText().toString().trim();
+
+        String address =
+                etAddressEdit.getText().toString().trim();
+
+        String email =
+                etEmailEdit.getText().toString().trim();
+
+        if (TextUtils.isEmpty(studentName)
+                || TextUtils.isEmpty(fatherName)
+                || TextUtils.isEmpty(phone)
+                || TextUtils.isEmpty(age)
+                || TextUtils.isEmpty(address)
+                || TextUtils.isEmpty(email)) {
+
+            Toast.makeText(
+                    StdEditProfileActivity.this,
+                    "Please fill all fields",
+                    Toast.LENGTH_SHORT
+            ).show();
+
+            return;
+        }
+
+        btnSave.setEnabled(false);
+        studentRef.child(uid).child("student_name").setValue(studentName);
+        studentRef.child(uid).child("father_name").setValue(fatherName);
+        studentRef.child(uid).child("phone").setValue(phone);
+        studentRef.child(uid).child("age").setValue(age);
+        studentRef.child(uid).child("address").setValue(address);
+        studentRef.child(uid).child("email").setValue(email);
+
+        // ==========================
+        // Update Family Member List
+        // ==========================
+
+        if (!uid.equals(ownerUid)) {
+
+            familyRef.child(uid).child("name").setValue(studentName);
+            familyRef.child(uid).child("age").setValue(age);
+
+        }
+
+        btnSave.setEnabled(true);
+
+        Toast.makeText(
+                StdEditProfileActivity.this,
+                "Profile updated successfully",
+                Toast.LENGTH_SHORT
+        ).show();
+
+        finish();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        uid = SessionManager.getCurrentMemberId(this);
+
+        if (uid == null || uid.isEmpty()) {
+            uid = ownerUid;
+        }
+
+        loadProfile();
     }
 }

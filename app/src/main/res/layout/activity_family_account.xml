@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F8FC">
+
+
+    <!-- Header -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/header_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/family"
+            android:padding="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family Account"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_marginTop="12dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage your family members"
+            android:textColor="#E8F5E9"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <!-- Family Card -->
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:layout_marginTop="-30dp"
+
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F1F8F3"
+            android:padding="22dp">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/family2"/>
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Family Name"
+                        android:textColor="#777777"
+                        android:textSize="13sp"/>
+
+
+                    <TextView
+                        android:id="@+id/tvFamilyName"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="My Family"
+                        android:textColor="#1B5E20"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <!-- Members Title -->
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+
+            android:text="Family Members"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222222"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <!-- Members List -->
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        android:layout_margin="16dp"
+
+        app:cardCornerRadius="18dp"
+        app:cardElevation="5dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMembers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#F1F8F3"
+            android:clipToPadding="false"
+            android:overScrollMode="never"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <!-- Add Member Button -->
+
+    <Button
+
+        android:id="@+id/btnAddMember"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="58dp"
+
+        android:layout_marginHorizontal="18dp"
+
+        android:layout_marginBottom="18dp"
+
+        android:background="@drawable/form_btn1"
+
+        android:text="＋  Add Family Member"
+
+        android:textColor="@android:color/white"
+
+        android:textAllCaps="false"
+
+        android:textStyle="bold"
+
+        android:textSize="17sp"/>
+
+
+
+</LinearLayout>

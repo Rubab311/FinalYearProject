@@ -122,6 +122,7 @@
 
                 <!-- Courses Card -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/courseCard"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
                     android:layout_weight="1"
@@ -179,6 +180,7 @@
 
                 <!-- Teachers Card -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/teacherCard"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
                     android:layout_weight="1"
@@ -247,6 +249,7 @@
 
                 <!-- Students Card -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/studentCard"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_weight="1"
@@ -304,6 +307,7 @@
 
                 <!-- Notifications Card -->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/notificationCard"
                     android:layout_width="0dp"
                     android:layout_height="105dp"
                     android:layout_weight="1"

@@ -47,8 +47,11 @@ public class std_crs_att extends AppCompatActivity {
         });
         calendarView.setHeaderTextAppearance(R.style.CalendarHeaderStyle);
 
-        uid = FirebaseAuth.getInstance().getUid();
-        courseId = getIntent().getStringExtra("courseId");
+        uid = SessionManager.getCurrentMemberId(this);
+
+        if (uid == null || uid.isEmpty()) {
+            uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        }        courseId = getIntent().getStringExtra("courseId");
         groupId = getIntent().getStringExtra("groupId");
 
         attendanceRef = FirebaseDatabase.getInstance().getReference("Attendance").child(courseId).child(groupId);

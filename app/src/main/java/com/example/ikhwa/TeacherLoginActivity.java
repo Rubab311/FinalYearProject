@@ -29,7 +29,7 @@ public class TeacherLoginActivity extends AppCompatActivity {
     private boolean isPasswordVisible = false;
     private static final String TAG = "TeacherLoginActivity";
 
-    private final String[] adminEmails = {"innovibes311@gmail.com", "ikhwaappproject2025@gmail.com"};
+    private final String[] adminEmails = {"innovibes311@gmail.com", "hidayahclub100@gmail.com"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

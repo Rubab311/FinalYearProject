@@ -85,8 +85,15 @@ backbtn.setOnClickListener(new View.OnClickListener() {
         Button btnClose = dialogView.findViewById(R.id.btn_close_dialog);
 
         tvName.setText("Name: " + staff.getStudent_name());
-        tvFatherName.setText("FatherName: " + staff.getfather_name());
-        tvEmail.setText("Name: " + staff.getEmail());
+        tvFatherName.setText("Father Name: " + staff.getFather_name());
+        tvEmail.setText("Email: " + staff.getEmail());
+        TextView tvAge = dialogView.findViewById(R.id.dialog_student_age);
+        TextView tvPhone = dialogView.findViewById(R.id.dialog_student_phone);
+        TextView tvAddress = dialogView.findViewById(R.id.dialog_student_address);
+
+        tvAge.setText("Age: " + staff.getAge());
+        tvPhone.setText("Phone: " + staff.getPhone());
+        tvAddress.setText("Address: " + staff.getAddress());
         builder.setView(dialogView); // Set custom view
 
         // Create dialog

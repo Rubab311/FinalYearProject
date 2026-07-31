@@ -115,6 +115,7 @@ public class TeacherAttendanceActivity extends AppCompatActivity {
                                                     case "A": radioA.setChecked(true); break;
                                                     case "L": radioL.setChecked(true); break;
                                                 }
+                                                attendanceMap.put(studentUid, status);
                                             }
                                         }
 

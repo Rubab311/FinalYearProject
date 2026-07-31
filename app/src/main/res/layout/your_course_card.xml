@@ -43,7 +43,7 @@
             android:layout_height="8dp"
             android:layout_below="@id/tv_chapter_count"
             android:layout_marginTop="8dp"
-            android:progress="25"
+
             android:max="100"
             android:progressDrawable="@drawable/custom_progress"/>
 
@@ -52,7 +52,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/progress_bar"
-            android:text="10/40 Completed"
             android:textSize="12sp"
             android:textColor="@android:color/white"
             android:layout_marginTop="4dp"/>
@@ -67,6 +66,7 @@
             android:layout_below="@id/tv_progress"
             android:textSize="14sp"
             android:layout_marginTop="8dp" />
+
 
         <Button
             android:id="@+id/btn_view_lecture"

@@ -122,6 +122,9 @@ public class StudentLoginActivity extends AppCompatActivity {
 
                         if (user != null) {
                             if (user.isEmailVerified()) {
+                                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                                SessionManager.setCurrentMemberId(StudentLoginActivity.this, uid);
                                 // Email verified → allow login
                                 Toast.makeText(StudentLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
