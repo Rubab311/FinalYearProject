@@ -235,6 +235,7 @@ public class CourseActivity extends AppCompatActivity {
 
         Button btnViewGroups = view.findViewById(R.id.crs_reg);
         Button btnDelete = view.findViewById(R.id.crs_del);
+        Button btnProgress = view.findViewById(R.id.btn_progress);
         ImageView closeBtn = view.findViewById(R.id.close_btn);
 
         // Change button text based on course type
@@ -281,7 +282,23 @@ public class CourseActivity extends AppCompatActivity {
         });
 
         closeBtn.setOnClickListener(v -> dialog.dismiss());
+        btnProgress.setOnClickListener(v -> {
 
+            Intent intent = new Intent(
+                    CourseActivity.this,
+                    AdminCourseProgressActivity.class
+            );
+
+            intent.putExtra("courseId", course.getId());
+            intent.putExtra("courseTitle", course.getTitle());
+
+            // ADD THIS LINE
+            intent.putExtra("courseType", course.getType());
+
+            startActivity(intent);
+
+            dialog.dismiss();
+        });
         btnViewGroups.setOnClickListener(v -> {
             if ("Quiz Based".equalsIgnoreCase(course.getType())) {
                 Intent intent = new Intent(CourseActivity.this, CourseContentActivity.class);

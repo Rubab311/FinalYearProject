@@ -404,7 +404,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
                                                 long size = group.child("students")
                                                         .getChildrenCount();
 
-                                                if (size < 2) {
+                                                if (size < 20) {
 
                                                     assignToGroup(
                                                             group.getRef(),

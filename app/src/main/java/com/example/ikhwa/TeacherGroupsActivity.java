@@ -86,8 +86,7 @@ public class TeacherGroupsActivity extends AppCompatActivity {
                             if (studentListSnap.exists()) {
                                 for (DataSnapshot studentUidSnap : studentListSnap.getChildren()) {
                                     String studentUid = studentUidSnap.getKey();
-                                    loadStudentDetailsInto(studentUid, studentListLayout);
-                                }
+                                    loadStudentDetailsInto(studentUid, groupId, studentListLayout);                                }
                             } else {
                                 TextView noStudents = new TextView(TeacherGroupsActivity.this);
                                 noStudents.setText("🚫 No students in this group.");
@@ -163,7 +162,9 @@ public class TeacherGroupsActivity extends AppCompatActivity {
         });
     }
 
-    private void loadStudentDetailsInto(String uid, LinearLayout studentListLayout) {
+    private void loadStudentDetailsInto(String uid,
+                                        String groupId,
+                                        LinearLayout studentListLayout) {
         DatabaseReference studentsRef = FirebaseDatabase.getInstance().getReference("Student");
 
         studentsRef.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -187,7 +188,22 @@ public class TeacherGroupsActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.WRAP_CONTENT);
                 params.setMargins(0, 5, 0, 5);
                 studentView.setLayoutParams(params);
+                studentView.setClickable(true);
+                studentView.setFocusable(true);
 
+                studentView.setOnClickListener(v -> {
+
+                    Intent intent = new Intent(TeacherGroupsActivity.this,
+                            StudentProgressActivity.class);
+
+                    intent.putExtra("studentUid", uid);
+                    intent.putExtra("courseId", courseId);
+                    intent.putExtra("groupId", groupId);
+                    intent.putExtra("courseTitle", courseTitle);
+
+                    startActivity(intent);
+
+                });
                 studentListLayout.addView(studentView);
             }
 

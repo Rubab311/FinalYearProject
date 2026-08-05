@@ -154,6 +154,20 @@
         android:background="@drawable/shape5"/>
 
     <Button
+        android:id="@+id/btn_progress"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="View Progress"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/non_selected_green"
+        android:padding="12dp"
+        android:background="@drawable/shape5"/>
+
+    <Button
         android:id="@+id/crs_del"
         android:layout_width="170dp"
         android:layout_height="wrap_content"

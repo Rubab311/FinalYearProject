@@ -72,12 +72,13 @@ public class AddFamilyMemberActivity extends AppCompatActivity {
 
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_item,
                 genders
         );
 
-        spGender.setAdapter(genderAdapter);
+        genderAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
+        spGender.setAdapter(genderAdapter);
         // Relationship Spinner
         String[] relationships = {
                 "Son",
@@ -93,12 +94,13 @@ public class AddFamilyMemberActivity extends AppCompatActivity {
 
         ArrayAdapter<String> relationAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_item,
                 relationships
         );
 
-        spRelationship.setAdapter(relationAdapter);
+        relationAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
+        spRelationship.setAdapter(relationAdapter);
         btnAdd.setOnClickListener(v -> addFamilyMember());
     }
     private void addFamilyMember() {

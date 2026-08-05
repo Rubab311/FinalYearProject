@@ -160,7 +160,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginTop="14dp"
-                    android:background="@drawable/edittext_bg"/>
+                    android:background="@drawable/edittext_bg"
+                    android:popupBackground="@android:color/white"
+                    android:theme="@style/SpinnerBlackTheme"/>
 
                 <!-- Relationship -->
 
@@ -169,7 +171,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginTop="14dp"
-                    android:background="@drawable/edittext_bg"/>
+                    android:background="@drawable/edittext_bg"
+                    android:popupBackground="@android:color/white"
+                    android:theme="@style/SpinnerBlackTheme"/>
                 <!-- Add Button -->
 
                 <Button
