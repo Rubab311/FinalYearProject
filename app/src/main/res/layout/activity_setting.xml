@@ -214,46 +214,6 @@
                     android:layout_height="1dp"
                     android:background="#F0F0F0" />
 
-                <!-- About Us -->
-                <RelativeLayout
-                    android:id="@+id/layout_about"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp">
-
-                    <ImageView
-                        android:id="@+id/icon_about"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_contact_us"
-
-                        android:backgroundTint="#673AB7"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="16dp"
-                        android:layout_toEndOf="@id/icon_about"
-                        android:text="About us"
-                        android:textColor="#808080"
-                        android:textSize="16sp" />
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@android:drawable/ic_media_play"
-                        android:backgroundTint="#072DF7"
-                        />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#F0F0F0" />
 
 
                 <View

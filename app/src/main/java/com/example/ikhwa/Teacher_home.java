@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.ikhwa.modules.TeacherDetails;
 import com.google.firebase.auth.FirebaseAuth;
@@ -70,6 +71,12 @@ public class Teacher_home extends AppCompatActivity {
         // Notifications and Data
         checkUnreadNotifications();
         loadTeacherData(); // <- Load name from TeacherRequests
+        CardView cardAboutInstitute = findViewById(R.id.cardAboutInstitute);
+
+        cardAboutInstitute.setOnClickListener(v -> {
+            Intent intent = new Intent(Teacher_home.this, AboutUsActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void checkUnreadNotifications() {

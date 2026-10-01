@@ -13,6 +13,8 @@
 
         <!-- ================= HEADER ================= -->
 
+        <!-- ================= ABOUT CARD ================= -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="240dp"
@@ -25,8 +27,8 @@
                 android:id="@+id/imgLogo"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:src="@drawable/logo"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,8 +36,8 @@
                 android:layout_marginTop="12dp"
                 android:text="IKHWA QURAN INSTITUTE"
                 android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -46,8 +48,6 @@
                 android:textSize="15sp" />
 
         </LinearLayout>
-
-        <!-- ================= ABOUT CARD ================= -->
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardAbout"
@@ -122,43 +122,42 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:background="#F1F8F3"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:padding="20dp">
-
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/chairman"
                     android:scaleType="centerCrop"
-                    app:civ_border_width="3dp"
-                    app:civ_border_color="#D4AF37"/>
+                    android:src="@drawable/chairman"
+                    app:civ_border_color="#D4AF37"
+                    app:civ_border_width="3dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Dr Muhammad Mustafa Jajja"
-                    android:textStyle="bold"
+                    android:textColor="#222222"
                     android:textSize="18sp"
-                    android:textColor="#222222"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Founder and Chairman"
-                    android:textSize="14sp"
-                    android:textColor="#888888"/>
+                    android:textColor="#888888"
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_width="50dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="10dp"
-                    android:background="#D4AF37"/>
+                    android:background="#D4AF37" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -168,7 +167,7 @@
                     android:lineSpacingExtra="4dp"
                     android:text="Under the visionary leadership of our Chairman, Ikhwa Quran Institute has continued to provide authentic Islamic education and inspire students to develop a lifelong connection with the Holy Quran and Sunnah."
                     android:textColor="#555555"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -196,10 +195,10 @@
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/images"
+                    android:src="@drawable/m"
                     android:scaleType="centerCrop"
                     app:civ_border_width="3dp"
                     app:civ_border_color="#D4AF37"/>
@@ -208,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Manager Name"
+                    android:text="Humaira Salah ud din"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="#222222"/>
@@ -216,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Institute Manager"
+                    android:text="Female Manager"
                     android:textSize="14sp"
                     android:textColor="#888888"/>
 
@@ -231,8 +230,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- ===== PART 1B ENDS HERE ===== -->
-        <!-- ================= SENIOR TEAM CARD ================= -->
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -253,7 +250,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Senior Team"
+                    android:text="Female Coordinator "
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:textColor="#0D5C46"/>
@@ -281,9 +278,9 @@
                         android:orientation="vertical">
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/images"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/c1"
                             android:scaleType="centerCrop"
                             app:civ_border_width="2dp"
                             app:civ_border_color="#D4AF37"/>
@@ -292,7 +289,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Senior Name"
+                            android:text="Sidra Hafeez"
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -312,9 +309,9 @@
                         android:orientation="vertical">
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/images"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/c2"
                             android:scaleType="centerCrop"
                             app:civ_border_width="2dp"
                             app:civ_border_color="#D4AF37"/>
@@ -323,7 +320,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Senior Name"
+                            android:text="Rubab Abdul Jabbar"
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="16sp"/>
@@ -337,7 +334,579 @@
 
         </androidx.cardview.widget.CardView>
 
+        <!-- ================= VOLUNTEER TEAM ================= -->
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F1F8F3"
+                android:padding="18dp">
+
+                <!-- Heading -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volunteer Team"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#0D5C46"/>
+
+                <View
+                    android:layout_width="55dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#D4AF37"/>
+
+
+                <!-- ================= INNER SCROLL ================= -->
+
+                <ScrollView
+                    android:id="@+id/volunteerScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="390dp"
+                    android:layout_marginTop="14dp"
+                    android:fillViewport="true"
+                    android:nestedScrollingEnabled="true"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:alignmentMode="alignMargins"
+                        android:columnOrderPreserved="false">
+
+
+                        <!-- ================= VOLUNTEER 1 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t1"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Fatima Daud"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 2 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t2"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Asra Saleem"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 3 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t3"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Muqaddas Waqas"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 4 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t4"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Jawaria Abdul Majeed"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 5 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t5"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Samra Gull"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 6 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t6"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Ifra Abdul Ghani"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 7 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t7"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Ayesha Gull"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 8 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t8"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Wajiha Noor"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 9 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t9"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Hafsa Abdul Aziz"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 10 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t10"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Ume Roman"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 11 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t11"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Laiba Nadeem"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 12 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t12"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Maryam Javed"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 13 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t13"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Sabeeha Hafeez"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 14 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t14"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Mamoona Naeem"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 15 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t15"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Mughira Imran"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+
+                        </LinearLayout>
+
+
+                        <!-- ================= VOLUNTEER 16 ================= -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="175dp"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:src="@drawable/t16"
+                                android:scaleType="centerCrop"
+                                app:civ_border_width="2dp"
+                                app:civ_border_color="#D4AF37"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text="Urooj Shahid"
+                                android:textColor="#222222"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+
+                        </LinearLayout>
+
+                    </GridLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <!-- ================= EVENTS CARD ================= -->
 
@@ -392,7 +961,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/logo"/>
+                                android:src="@drawable/e1"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -407,7 +976,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/logo"/>
+                                android:src="@drawable/e2"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -422,7 +991,177 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/logo"/>
+                                android:src="@drawable/e3"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e4"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e5"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e5b"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e5c"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e6"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e7"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e8"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e9"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e10"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e11"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e12"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="220dp"
+                            android:layout_height="140dp"
+                            android:layout_marginStart="12dp"
+                            app:cardCornerRadius="14dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/e13"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -433,6 +1172,145 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F1F8F3"
+        android:padding="18dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Memorable Trips"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#0D5C46"/>
+
+    <View
+        android:layout_width="55dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="#D4AF37"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="220dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tr1"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="220dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="14dp"
+            android:layout_marginStart="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tr2"/>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="220dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="14dp"
+            android:layout_marginStart="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tr3"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+        <!-- ================= VISION CARD ================= -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F1F8F3"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Competitions and Workshops"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#0D5C46"/>
+
+                <View
+                    android:layout_width="55dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="6dp"
+                    android:background="#D4AF37"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="We organize engaging online competitions such as debating, painting, Milli Naghma and quizzes, giving students opportunities to showcase their creativity, knowledge and skills. Exciting cash prizes and other rewards are offered to encourage and appreciate their participation. We also conduct informative and interactive workshops for teachers and students to support learning, creativity and personal development."
+                    android:textColor="#555555"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
         <!-- ================= MISSION CARD ================= -->
 
         <androidx.cardview.widget.CardView
@@ -479,52 +1357,6 @@
         </androidx.cardview.widget.CardView>
 
 
-        <!-- ================= VISION CARD ================= -->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="18dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#F1F8F3"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Our Vision"
-                    android:textStyle="bold"
-                    android:textSize="22sp"
-                    android:textColor="#0D5C46"/>
-
-                <View
-                    android:layout_width="55dp"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="6dp"
-                    android:background="#D4AF37"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:lineSpacingExtra="4dp"
-                    android:text="Building a generation connected with the Quran, inspired by Islamic values, and prepared to serve society with knowledge and integrity."
-                    android:textColor="#555555"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
         <!-- ================= CONTACT CARD ================= -->
 
         <androidx.cardview.widget.CardView
@@ -540,7 +1372,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/about_bg"
+                android:background="#F1F8F3"
                 android:padding="18dp">
 
                 <TextView
@@ -561,7 +1393,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
-                    android:text="📞 +92 300 1234567"
+                    android:text="📞 +92 3278731449"
                     android:textSize="16sp"
                     android:textColor="#444444"/>
 
@@ -569,23 +1401,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="✉ info@ikhwa.org"
+                    android:text="✉  ikhwainternational@gmail.com"
                     android:textSize="16sp"
                     android:textColor="#444444"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="🌐 www.ikhwa.org"
-                    android:textSize="16sp"
-                    android:textColor="#444444"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="📍 Your Institute Address Here"
+                    android:text="📍 The Scholars College 44A Satellite town Gujranwala "
                     android:textSize="16sp"
                     android:textColor="#444444"/>
 

@@ -613,9 +613,8 @@ public class LectureDetailActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT
                     ).show();
 
-                    setResult(RESULT_OK);
 
-                    finish();
+
 
                 })
                 .addOnFailureListener(e -> {

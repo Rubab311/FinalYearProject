@@ -12,10 +12,10 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -187,6 +187,12 @@ public class StudentHome2 extends AppCompatActivity {
         loadCurrentCourses();
 
         checkUnreadNotifications();
+        CardView cardAboutInstitute = findViewById(R.id.cardAboutInstitute);
+
+        cardAboutInstitute.setOnClickListener(v -> {
+            Intent intent = new Intent(StudentHome2.this, AboutUsActivity.class);
+            startActivity(intent);
+        });
 
     }
     private void checkUnreadNotifications() {

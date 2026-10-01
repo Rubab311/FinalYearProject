@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="6dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgVolunteer"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/images"
+        android:scaleType="centerCrop"
+        android:padding="2dp"
+        android:layout_marginBottom="7dp"/>
+
+    <TextView
+        android:id="@+id/tvVolunteerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteer Name"
+        android:textColor="#151515"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvVolunteerRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volunteer"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>
